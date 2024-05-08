@@ -1,0 +1,21 @@
+
+ header{
+    color:rebeccapurple;
+ }
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ Table cells 
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+
+th {
+    background-color: #f2f2f2;
+    
