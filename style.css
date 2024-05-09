@@ -1,9 +1,10 @@
 
  header{
     color:rebeccapurple;
-    }
+    background-color:whitesmoke;
+}
  body{
-    background-color:lightsteelblue;
+    background-color:powderblue;
  }
  .header-row th {
     background-color: darkgray;
@@ -16,6 +17,10 @@
 
 .even-row {
     background-color: #e0e0ff;
+}
+#topH{
+    background-color:honeydew;
+    border: 2px solid whitesmoke;
 }
 
 
