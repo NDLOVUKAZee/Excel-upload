@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   let tableData = [];
 
-  document.getElementById('displayButton').addEventListener('click', function() {
+document.getElementById('displayButton').addEventListener('click', function() {
     const InputF = document.getElementById('fileInput');
     const file = InputF.files[0];
     const reader = new FileReader();
