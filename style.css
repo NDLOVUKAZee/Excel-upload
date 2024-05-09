@@ -1,21 +1,21 @@
 
  header{
     color:rebeccapurple;
+    }
+ body{
+    background-color:lightsteelblue;
  }
-
- table {
-    border-collapse: collapse;
-    width: 100%;
+ .header-row th {
+    background-color: darkgray;
+    color:white;
 }
 
- Table cells 
-td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    
+.odd-row {
+    background-color: #f0f0f0;
+}
+
+.even-row {
+    background-color: #e0e0ff;
 }
 
 
-th {
-    background-color: #f2f2f2;
-    

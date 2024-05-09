@@ -17,22 +17,31 @@ document.addEventListener("DOMContentLoaded", function() {
   
       reader.readAsArrayBuffer(file);
     });
-  
+    
     function renderTable() {
       const filteredData = applySearchFilter(tableData);
       let tableHTML = '<table class="table table-bordered">';
       
-      for (let i = 0; i < filteredData.length; i++) {
-        tableHTML += '<tr>';
-        for (let j = 0; j < filteredData[i].length; j++) {
-          tableHTML += '<td>' + filteredData[i][j] + '</td>';
-        }
-        tableHTML += '</tr>';
+      
+      tableHTML += '<thead><tr class="header-row">';
+      for (let header of filteredData[0]) {
+          tableHTML += '<th>' + header + '</th>';
       }
+      tableHTML += '</tr></thead>';
+      
+      tableHTML += '<tbody>';
+      for (let i = 1; i < filteredData.length; i++) {
+          tableHTML += '<tr class="' + (i % 2 === 0 ? 'even-row' : 'odd-row') + '">';
+          for (let j = 0; j < filteredData[i].length; j++) {
+              tableHTML += '<td>' + filteredData[i][j] + '</td>';
+          }
+          tableHTML += '</tr>';
+      }
+      tableHTML += '</tbody>';
       
       tableHTML += '</table>';
-      document.getElementById('dataTableContainer').innerHTML = tableHTML;
-    }
+      document.getElementById('dataTable').innerHTML = tableHTML;
+  }
   
     function applySearchFilter(data) {
       const searchValue = document.getElementById('searchInput').value.trim().toLowerCase();
